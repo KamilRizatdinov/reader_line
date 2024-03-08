@@ -70,7 +70,7 @@ function App() {
     <div className="app">
       <div className='app__header'>
         <h1>Reader Line</h1>
-        <Switch onChange={onEnabledChange} value={enabled} />
+        <Switch checkedChildren="ON" unCheckedChildren="OFF" onChange={onEnabledChange} value={enabled} />
       </div>
 
       <Flex vertical gap={"small"}>
