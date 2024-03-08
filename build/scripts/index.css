@@ -1,0 +1,9 @@
+.reader-line {
+  z-index: 999;
+  position: fixed;
+  width: 100vw;
+  height: 20px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}

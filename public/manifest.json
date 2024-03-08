@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Reader Line",
+  "version": "1.0.0",
+  "description": "A basic example extension with only required keys",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": ["scripts/index.js"],
+      "css": ["scripts/index.css"],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin: 0px;
+}
+
+p {
+  position: relative;
+}
+
+.app {
+  background-color: white;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 20px;
+  min-height: 350px;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ant-input-number-group-addon:nth-of-type(1) {
+  min-width: 80px;
+}
+
+.ant-input-number-group-addon:nth-of-type(2) {
+  min-width: 20px;
+}
+
+input[type="color"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+}
+
+.submit {
+  margin-top: 100%;
+}
+
+.color-picker__button {
+  background-image:  (rgba(0, 0, 0, 0.06) 0 25%, transparent 0 50%, rgba(0, 0, 0, 0.06) 0 75%, transparent 0);
+}
