@@ -21,7 +21,7 @@ function App() {
         setColor(color);
       }
 
-      if (!!height) {
+      if (typeof height === "number") {
         setHeight(height);
       }
 

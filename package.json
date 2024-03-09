@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && minify public/scripts/index.js -o build/scripts/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-minify": "^0.5.2"
   }
 }
