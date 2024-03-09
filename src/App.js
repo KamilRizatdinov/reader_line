@@ -29,7 +29,9 @@ function App() {
         setMode(mode);
       }
 
-      setEnabled(!!enabled);
+      if (typeof enabled === "boolean") {
+        setEnabled(enabled);
+      }
     });
   }, []);
 
