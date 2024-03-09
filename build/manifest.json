@@ -13,8 +13,7 @@
     "128": "icons/128.png"
   },
   "permissions": [
-    "storage",
-    "scripting"
+    "storage"
   ],
   "content_scripts": [
     {

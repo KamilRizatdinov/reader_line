@@ -8,7 +8,7 @@ if (!readerLine) {
 }
 
 // Update readerLine style
-function updateReaderLine(color = "rgba(0, 0, 0, 0.15)", height = 400, enabled = true, mode = "line") {
+function updateReaderLine(color = "rgba(0, 0, 0, 0.15)", height = 20, enabled = true, mode = "line") {
   console.log("updateReaderLine", color, height, enabled, mode);
   readerLine.style.setProperty('--pseudo-background', color);
   readerLine.style.backgroundColor = color;
