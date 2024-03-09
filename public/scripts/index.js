@@ -8,11 +8,20 @@ if (!readerLine) {
 }
 
 // Update readerLine style
-function updateReaderLine(color, height, enabled) {
-  console.log("updateReaderLine", color, height, enabled);
+function updateReaderLine(color, height, enabled, mode) {
+  console.log("updateReaderLine", color, height, enabled, mode);
+  readerLine.style.setProperty('--pseudo-background', color);
   readerLine.style.backgroundColor = color;
   readerLine.style.height = height + "px";
   readerLine.style.display = enabled ? "block" : "none";
+  
+  if (mode === "line") {
+    readerLine.classList.remove("reader-line--focus");
+  }
+
+  if (mode === "focus") {
+    readerLine.classList.add("reader-line--focus");
+  }
 }
 
 // Event listener for mousemove
@@ -23,11 +32,12 @@ document.addEventListener("mousemove", (e) => {
 
 // Function to update values and readerLine style
 function updateValuesAndReaderLine() {
-  chrome.storage.local.get(['color', 'height', 'enabled'], (result) => {
+  chrome.storage.local.get(['color', 'height', 'enabled', 'mode'], (result) => {
     const color = result.color;
     const height = result.height;
     const enabled = result.enabled;
-    updateReaderLine(color, height, enabled);
+    const mode = result.mode;
+    updateReaderLine(color, height, enabled, mode);
   });
 }
 

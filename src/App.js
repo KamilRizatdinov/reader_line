@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {InputNumber, ColorPicker, Flex, Switch} from 'antd';
+import {InputNumber, ColorPicker, Flex, Switch, Select} from 'antd';
 
 import "./App.css";
 
@@ -7,6 +7,7 @@ function App() {
   const [color, setColor] = useState("rgba(0, 0, 0, 0.15)");
   const [height, setHeight] = useState(20);
   const [enabled, setEnabled] = useState(true);
+  const [mode, setMode] = useState("line");
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
@@ -15,13 +16,19 @@ function App() {
     }
 
     // eslint-disable-next-line no-undef
-    chrome.storage.local.get(["color", "height", "enabled"]).then(({color, height, enabled}) => {
+    chrome.storage.local.get(["color", "height", "mode", "enabled"]).then(({color, height, mode, enabled}) => {
+      console.log({color, height, enabled, mode});
+
       if (!!color) {
         setColor(color);
       }
 
       if (!!height) {
         setHeight(height);
+      }
+
+      if (!!mode) {
+        setMode(mode);
       }
 
       setEnabled(!!enabled);
@@ -61,9 +68,19 @@ function App() {
     }
 
     // eslint-disable-next-line no-undef
-    chrome.storage.local.set({enabled: value}).then(() => {
-      console.log("Value is set");
-    });
+    chrome.storage.local.set({enabled: value});
+  }, []);
+
+  const onModeChange = useCallback(value => {
+    setMode(value);
+
+    // eslint-disable-next-line no-undef
+    if (!chrome?.storage) {
+      return;
+    }
+
+    // eslint-disable-next-line no-undef
+    chrome.storage.local.set({mode: value});
   }, []);
 
   return (
@@ -77,6 +94,15 @@ function App() {
         <ColorPicker onChange={onColorChange} value={color} />
 
         <InputNumber addonBefore="height" onChange={onHeightChange} value={height} controls={true} addonAfter="px" />
+
+        <Select value={mode}  onChange={onModeChange} options={[{
+          value: 'line',
+          label: 'Line',
+        },
+        {
+          value: 'focus',
+          label: 'Focus',
+        },]} />
       </Flex>
     </div>
   );
