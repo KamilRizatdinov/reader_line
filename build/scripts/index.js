@@ -8,12 +8,12 @@ if (!readerLine) {
 }
 
 // Update readerLine style
-function updateReaderLine(color, height, enabled, mode) {
+function updateReaderLine(color = "rgba(0, 0, 0, 0.15)", height = 400, enabled = true, mode = "line") {
   console.log("updateReaderLine", color, height, enabled, mode);
   readerLine.style.setProperty('--pseudo-background', color);
   readerLine.style.backgroundColor = color;
   readerLine.style.height = height + "px";
-  readerLine.style.display = enabled ? "block" : "none";
+  readerLine.style.display = (!!enabled) ? "block" : "none";
   
   if (mode === "line") {
     readerLine.classList.remove("reader-line--focus");

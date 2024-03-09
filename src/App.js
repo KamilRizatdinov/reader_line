@@ -17,8 +17,6 @@ function App() {
 
     // eslint-disable-next-line no-undef
     chrome.storage.local.get(["color", "height", "mode", "enabled"]).then(({color, height, mode, enabled}) => {
-      console.log({color, height, enabled, mode});
-
       if (!!color) {
         setColor(color);
       }
