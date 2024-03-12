@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [color, setColor] = useState("rgba(0, 0, 0, 0.15)");
   const [height, setHeight] = useState(20);
-  const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState(false);
   const [mode, setMode] = useState("line");
 
   useEffect(() => {
