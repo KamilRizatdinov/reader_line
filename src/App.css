@@ -2,6 +2,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 h1 {
   margin: 0px;
 }
@@ -32,6 +36,11 @@ p {
 
 .ant-input-number-group-addon:nth-of-type(2) {
   min-width: 20px;
+}
+
+.ant-radio-group label {
+  width: 50%;
+  text-align: center;
 }
 
 input[type="color"] {

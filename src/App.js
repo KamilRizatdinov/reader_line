@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {InputNumber, ColorPicker, Flex, Switch, Select} from 'antd';
+import {InputNumber, ColorPicker, Flex, Switch, Radio} from 'antd';
 
 import "./App.css";
 
@@ -95,14 +95,23 @@ function App() {
 
         <InputNumber addonBefore="height" onChange={onHeightChange} value={height} controls={true} addonAfter="px" />
 
-        <Select value={mode}  onChange={onModeChange} options={[{
-          value: 'line',
-          label: 'Line',
-        },
-        {
-          value: 'focus',
-          label: 'Focus',
-        },]} />
+        <Radio.Group
+          options={[
+            {
+              value: 'line',
+              label: 'Line',
+            },
+            {
+              value: 'focus',
+              label: 'Focus',
+            }
+          ]}
+          onChange={(e) => onModeChange(e.target.value)}
+          value={mode}
+          optionType="button"
+          buttonStyle="solid"
+          size='middle'
+        />
       </Flex>
     </div>
   );
