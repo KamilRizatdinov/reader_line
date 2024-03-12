@@ -1,0 +1,31 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 60px;
+  font-size: 60px;
+}
+
+h2 {
+  color: rgba(80, 80, 80, 1.0);
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
