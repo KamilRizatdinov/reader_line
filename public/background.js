@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener((details) => { 
   if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({
-      url: "https://kamilrizatdinov.github.io/reader_line/",
+      url: "https://kamilrizatdinov.github.io/reader_line/welcome",
     });
   } else if (details.reason === chrome.runtime.OnInstalledReason.UPDATE) { 
     // When extension is updated
@@ -11,3 +11,5 @@ chrome.runtime.onInstalled.addListener((details) => {
     // When a shared module is updated
   }
 });
+
+chrome.runtime.setUninstallURL("https://kamilrizatdinov.github.io/reader_line/goodbye");
