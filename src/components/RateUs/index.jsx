@@ -22,7 +22,7 @@ const RateUs = () => {
             <StarFilled 
               key={i}
               onMouseEnter={() => setRating(i)} 
-              onClickCapture={onClick}
+              onClickCapture={() => onClick(rating)}
               style={{
                 fontSize: "30px", 
                 color: "#1D8B70",
