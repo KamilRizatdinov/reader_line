@@ -2,6 +2,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 h1 {
   margin: 0px;
 }

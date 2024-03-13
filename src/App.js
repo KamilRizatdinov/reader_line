@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {InputNumber, ColorPicker, Flex, Switch, Radio} from 'antd';
+import RateUs from './components/RateUs';
 
 import "./App.css";
 
@@ -112,6 +113,8 @@ function App() {
           buttonStyle="solid"
           size='middle'
         />
+
+        <RateUs />
       </Flex>
     </div>
   );
