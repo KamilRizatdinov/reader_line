@@ -8,9 +8,9 @@ const RateUs = () => {
   const [rating, setRating] = useState(0);
   const onClick = useCallback((rating) => {
     if (rating >= 4) {
-      window.open("https://google.com", '_blank').focus();
+      window.open("https://chromewebstore.google.com/detail/reader-line/fmkadmapgofadopljbjfkapdkoienihi/reviews", '_blank').focus();
     } else {
-      window.open("https://google.com", '_blank').focus();
+      window.open("https://kamilrizatdinov.github.io/reader_line/rate-us", '_blank').focus();
     }
   }, []);
 
