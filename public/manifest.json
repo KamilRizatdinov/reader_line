@@ -23,7 +23,7 @@
       "css": ["scripts/index.css"],
       "matches": [
         "http://*/*",
-        "https://*/*",
+        "https://*/*"
       ]
     }
   ],
