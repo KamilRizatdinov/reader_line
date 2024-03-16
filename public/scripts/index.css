@@ -1,4 +1,4 @@
-.reader-line {
+.cmVhZGVyLWxpbmU {
   z-index: 100000000;
   position: fixed;
   width: 100vw;
@@ -9,7 +9,7 @@
   --pseudo-background: rgba(0, 0, 0, 0.15);
 }
 
-.reader-line--focus {
+.cmVhZGVyLWxpbmU--focus {
   z-index: 100000000;
   position: fixed;
   width: 100vw;
@@ -19,7 +19,7 @@
   pointer-events: none;
 }
 
-.reader-line--focus::after {
+.cmVhZGVyLWxpbmU--focus::after {
   content: ".";
   width: 100%;
   background-color: var(--pseudo-background);
@@ -31,7 +31,7 @@
   z-index: 100000000;
 }
 
-.reader-line--focus::before {
+.cmVhZGVyLWxpbmU--focus::before {
   content: ".";
   width: 100%;
   background-color: var(--pseudo-background);

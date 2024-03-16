@@ -1,9 +1,10 @@
 // Create or select the readerLine element
-let readerLine = document.querySelector(".reader-line");
+const READER_LINE_CLASS = "cmVhZGVyLWxpbmU";
+let readerLine = document.querySelector(`.${READER_LINE_CLASS}`);
 
 if (!readerLine) {
   readerLine = document.createElement("div");
-  readerLine.setAttribute("class", "reader-line");
+  readerLine.setAttribute("class", READER_LINE_CLASS);
   document.querySelector("body").appendChild(readerLine);
 }
 
@@ -16,11 +17,11 @@ function updateReaderLine(color = "rgba(0, 0, 0, 0.15)", height = 20, enabled = 
   readerLine.style.display = (!!enabled) ? "block" : "none";
   
   if (mode === "line") {
-    readerLine.classList.remove("reader-line--focus");
+    readerLine.classList.remove("cmVhZGVyLWxpbmU--focus");
   }
 
   if (mode === "focus") {
-    readerLine.classList.add("reader-line--focus");
+    readerLine.classList.add("cmVhZGVyLWxpbmU--focus");
   }
 }
 
