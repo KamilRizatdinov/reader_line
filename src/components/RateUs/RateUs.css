@@ -1,4 +1,9 @@
 .rate-us {
-  align-self: flex-end;
-  margin-top: 140px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.rate-us__stars {
+  align-items: center;
+  justify-content: center;
 }
