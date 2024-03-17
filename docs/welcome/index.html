@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Reader Line | Welcome</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
+    <head>
+        <title>Reader Line | Welcome</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
 
-  <body>
-    <div class="container">
-      <h1>Reader Line has been installed 🎉</h1>
+    <body>
+        <div class="container">
+            <h1>Reader Line has been installed 🎉</h1>
 
-      <h2>1. Pin Reader Line extension for easy access</h2>
-      <img src="instruction1.png" />
+            <h2>1. Pin Reader Line extension for easy access</h2>
+            <img src="instruction1.png" />
 
-      <h2>2. Click on extension icon to open the Reader Line and turn it on</h2>
-      <img src="instruction2.png" />
-    </div>
-  </body>
+            <h2>2. Click on extension icon to open the Reader Line and turn it on</h2>
+            <img src="instruction2.png" />
+
+
+            <div class="tip">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/"
+                    width="60px" height="100%" viewBox="0 0 64 64" version="1.1" xml:space="preserve"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <g>
+                        <path
+                            d="M46,26L3,26C1.895,26 1,26.895 1,28L1,36C1,37.104 1.895,38 3,38L46,38L46,44C46,44.794 46.47,45.513 47.198,45.832C47.926,46.151 48.773,46.008 49.357,45.469L62.357,33.469C62.767,33.091 63,32.558 63,32C63,31.442 62.767,30.909 62.357,30.53L49.357,18.53C48.773,17.991 47.926,17.849 47.198,18.168C46.47,18.486 46,19.205 46,20L46,26Z" />
+                    </g>
+                </svg>
+
+                <span>You can find extension puzzle icon here!</span>
+            </div>
+            
+        </div>
+
+        <script>
+            const images = document.querySelectorAll("img");
+            const tip = document.querySelector(".tip");
+
+            for (const image of images) {
+                image.addEventListener("click", () => {
+                    tip.setAttribute("class", "tip tip--visible");
+                    setTimeout(() => tip.setAttribute("class", "tip"), 5000);
+                })
+            }
+        </script>
+    </body>
 </html>
