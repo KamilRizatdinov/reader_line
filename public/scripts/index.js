@@ -10,7 +10,6 @@ if (!readerLine) {
 
 // Update readerLine style
 function updateReaderLine(color = "rgba(0, 0, 0, 0.15)", height = 20, enabled = false, mode = "line") {
-  console.log("updateReaderLine", color, height, enabled, mode);
   readerLine.style.setProperty('--pseudo-background', color);
   readerLine.style.backgroundColor = color;
   readerLine.style.height = height + "px";
@@ -33,7 +32,7 @@ document.addEventListener("mousemove", (e) => {
 
 // Function to update values and readerLine style
 function updateValuesAndReaderLine() {
-  chrome.storage.local.get(['color', 'height', 'enabled', 'mode'], (result) => {
+  chrome.storage.local.get(['color', 'height', 'enabled', 'mode']).then((result) => {
     const color = result.color;
     const height = result.height;
     const enabled = result.enabled;
