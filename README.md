@@ -1,12 +1,12 @@
 # Reader Line
 
-![https://chromewebstore.google.com/detail/reader-line/fikijclmnnepcpijbljojpdaepikaicm?utm_source=github](./assets/download_badge.png)
+[![download badge](./assets/download_badge.png)](https://chromewebstore.google.com/detail/reader-line/fikijclmnnepcpijbljojpdaepikaicm?utm_source=github)
 
 Use Reader Line app to guide and enhance your experience with reading ruler to maintain your focus with reading line.
 
 Introducing Reader Line: revolutionising your reading experience! 📕
 
-![](./assets/first-screen.png)
+![UI screenshot](./assets/first-screen.png)
 
 ## 🚀 Quick start tips
 1. Click "Add to Chrome" to install the extension seamlessly into your browser.
