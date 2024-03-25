@@ -1,5 +1,7 @@
 # Reader Line
 
+![https://chromewebstore.google.com/detail/reader-line/fikijclmnnepcpijbljojpdaepikaicm?utm_source=github](./assets/download_badge.png)
+
 Use Reader Line app to guide and enhance your experience with reading ruler to maintain your focus with reading line.
 
 Introducing Reader Line: revolutionising your reading experience! 📕
