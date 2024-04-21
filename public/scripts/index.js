@@ -42,7 +42,11 @@ function updateValuesAndReaderLine() {
 }
 
 // Listen for changes in storage.local
-
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (namespace === 'local') {
+    updateValuesAndReaderLine();
+  }
+});
 
 // Query the initial values from the background script
 updateValuesAndReaderLine();
