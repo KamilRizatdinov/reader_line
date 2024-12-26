@@ -20,3 +20,57 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 })
 
 chrome.runtime.setUninstallURL("https://kamilrizatdinov.github.io/reader_line/goodbye");
+
+
+class TabsController {
+  tabsWithLoadedSidebar= {}
+
+  targetContentScriptFiles = []
+
+  setTabContentScriptLoaded = (tabId) => {
+    if (!tabId) return
+    this.tabsWithLoadedSidebar[tabId] = true
+  }
+
+  isTabContentScriptLoaded = (tabId) => {
+    if (!tabId) return false
+
+    return this.tabsWithLoadedSidebar[tabId]
+  }
+
+  setContentScriptFiles = (files) => {
+    if (!files) return
+    this.targetContentScriptFiles = [...this.targetContentScriptFiles, ...files]
+  }
+
+  injectContentScriptFilesToTab = async (tabId) => {
+    if (!tabId || this.targetContentScriptFiles.length == 0) return Promise.reject()
+
+    return chrome.scripting
+      .executeScript({
+        target: { tabId: tabId },
+        files: [...this.targetContentScriptFiles],
+      })
+      .then(() => {
+        this.setTabContentScriptLoaded(tabId)
+      })
+  }
+}
+
+const tabsController = new TabsController()
+const contentScriptFile1 = chrome.runtime.getManifest()?.content_scripts?.[0].js
+tabsController.setContentScriptFiles(contentScriptFile1)
+
+
+chrome.tabs.onActivated.addListener(async (activeInfo) => {
+  const tab = await chrome.tabs.get(activeInfo.tabId)
+
+  if (tab.url && tab.url.includes('http') && !tab.url.includes('chromewebstore.google.com')) {
+    const tabId = activeInfo.tabId
+
+    if (!tabsController.isTabContentScriptLoaded(tabId)) {
+      await tabsController.injectContentScriptFilesToTab(tabId)
+    }
+  }
+})
+

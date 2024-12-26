@@ -15,7 +15,13 @@
     "128": "icons/128.png"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
   ],
   "content_scripts": [
     {
