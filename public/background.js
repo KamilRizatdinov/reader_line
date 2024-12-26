@@ -12,4 +12,11 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type && message.type === 'openPopup') {
+    chrome.action.openPopup()
+    sendResponse({status: "OK"})
+  }
+})
+
 chrome.runtime.setUninstallURL("https://kamilrizatdinov.github.io/reader_line/goodbye");
