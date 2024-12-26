@@ -26,6 +26,7 @@ class TabsController {
   tabsWithLoadedSidebar= {}
 
   targetContentScriptFiles = []
+  targetCSSFiles = []
 
   setTabContentScriptLoaded = (tabId) => {
     if (!tabId) return
@@ -43,6 +44,11 @@ class TabsController {
     this.targetContentScriptFiles = [...this.targetContentScriptFiles, ...files]
   }
 
+  setCSSFiles = (files) => {
+    if (!files) return
+    this.targetCSSFiles = [...this.targetCSSFiles, ...files]
+  }
+
   injectContentScriptFilesToTab = async (tabId) => {
     if (!tabId || this.targetContentScriptFiles.length == 0) return Promise.reject()
 
@@ -55,11 +61,26 @@ class TabsController {
         this.setTabContentScriptLoaded(tabId)
       })
   }
+
+  injectsetCSSFilesToTab = async (tabId) => {
+    if (!tabId || this.targetCSSFiles.length == 0) return Promise.reject()
+
+    return chrome.scripting
+      .insertCSS({
+        target: { tabId: tabId },
+        files: [...this.targetCSSFiles],
+      })
+      .then(() => {
+        this.setTabContentScriptLoaded(tabId)
+      })
+  }
 }
 
 const tabsController = new TabsController()
-const contentScriptFile1 = chrome.runtime.getManifest()?.content_scripts?.[0].js
-tabsController.setContentScriptFiles(contentScriptFile1)
+const contentScriptFiles = chrome.runtime.getManifest()?.content_scripts?.[0].js
+const CSSFiles = chrome.runtime.getManifest()?.content_scripts?.[0].css
+tabsController.setContentScriptFiles(contentScriptFiles)
+tabsController.setCSSFiles(CSSFiles)
 
 
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
@@ -70,6 +91,7 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 
     if (!tabsController.isTabContentScriptLoaded(tabId)) {
       await tabsController.injectContentScriptFilesToTab(tabId)
+      await tabsController.injectsetCSSFilesToTab(tabId)
     }
   }
 })
