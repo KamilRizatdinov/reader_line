@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {
   if (message.type && message.type === 'openPopup') {
     chrome.action.openPopup()
     sendResponse({status: "OK"})
