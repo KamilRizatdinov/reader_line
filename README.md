@@ -2,7 +2,7 @@
 
 [![download badge](./assets/download_badge.png)](https://chromewebstore.google.com/detail/reader-line/fikijclmnnepcpijbljojpdaepikaicm?utm_source=github)
 
-Use Reader Line app to guide and enhance your experience with reading ruler to maintain your focus with reading line.
+Use Reader Line app to guide and enhance your reading experience with a reading ruler to maintain your focus with the reading line.
 
 Introducing Reader Line: revolutionising your reading experience! 📕
 
@@ -11,17 +11,17 @@ Introducing Reader Line: revolutionising your reading experience! 📕
 ## 🚀 Quick start tips
 1. Click "Add to Chrome" to install the extension seamlessly into your browser.
 2. Open any webpage or document where you want to enhance your reading experience.
-3. Adjust the color, height, and opacity of the read ruler to your preferences.
+3. Adjust the color, height, and opacity of the reading ruler to your preferences.
 4. Move the reading ruler with your mouse cursor to focus on specific lines or paragraphs.
 5. Dive into your reading material with improved clarity and focus, courtesy of reading help!
 
-## 💎 Enhance your reading journey with reader ruler
+## 💎 Enhance your reading journey with the reading ruler
 Reader line serves as your trusted reading companion, offering a range of features to cater to your unique reading needs. Whether you're a student, professional, or simply enjoy diving into a good book, focus ruler is here to elevate your reading journey.
 
 ## ⚙️ Customizable reading guide
-Here are the options of read ruler you can easily customize in extension settings:
+Here are the options of the reading ruler you can easily customize in extension settings:
 
-✴️ Color and opacity. Changing reading ruler color enhance readability on websites with different backgrounds.
+✴️ Color and opacity. Changing the reading ruler color enhances readability on websites with different backgrounds.
 
 ✴️ Ruler height. By setting height of the reading guide user can adapt to different font sizes and line spacing for optimal reading experience.
 
@@ -35,7 +35,7 @@ Here are the options of read ruler you can easily customize in extension setting
 
 💡 Designed with inclusivity in mind, reader line prioritizes accessibility, making it a valuable tool for individuals with diverse reading needs.
 
-## 🛠 Future features\n 
+## 🛠 Future features
 
 1️⃣ Focus mode. 
 
@@ -43,7 +43,7 @@ The focus mode feature enhances concentration by highlighting a single reader li
 
 2️⃣ PDF support. 
 
-Seamlessly integrate read ruler's features into pdf files, offering a consistent reading experience across different formats and platforms. Whether you're studying academic papers, reviewing reports, or enjoying leisure reading, reading help will be there to provide invaluable support and assistance.
+Seamlessly integrate the reading ruler's features into PDF files, offering a consistent reading experience across different formats and platforms. Whether you're studying academic papers, reviewing reports, or enjoying leisure reading, reading help will be there to provide invaluable support and assistance.
 
 ## ❓ Frequently asked questions
 
@@ -69,8 +69,8 @@ Reading ruler is compatible with most websites and web-based documents, providin
 
 📌 How can reading guide improve my reading speed and comprehension?
 
-By providing a visual guide and minimizing distractions, reading ruler assist users focus on the text, leading to improved reading speed and comprehension.
+By providing a visual guide and minimizing distractions, the reading ruler helps users focus on the text, leading to improved reading speed and comprehension.
 
 📌 Is reader line suitable for students?
 
-Yes, read ruler is an excellent tool for students, helping them stay focused while studying, researching, and reading academic texts.
+Yes, the reading ruler is an excellent tool for students, helping them stay focused while studying, researching, and reading academic texts.

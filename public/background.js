@@ -62,7 +62,7 @@ class TabsController {
       })
   }
 
-  injectsetCSSFilesToTab = async (tabId) => {
+  injectCSSFilesToTab = async (tabId) => {
     if (!tabId || this.targetCSSFiles.length == 0) return Promise.reject()
 
     return chrome.scripting
@@ -91,7 +91,7 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 
     if (!tabsController.isTabContentScriptLoaded(tabId)) {
       await tabsController.injectContentScriptFilesToTab(tabId)
-      await tabsController.injectsetCSSFilesToTab(tabId)
+      await tabsController.injectCSSFilesToTab(tabId)
     }
   }
 })
