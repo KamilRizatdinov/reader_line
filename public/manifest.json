@@ -25,12 +25,16 @@
   ],
   "content_scripts": [
     {
-      "js": ["scripts/index.js"],
-      "css": ["scripts/index.css"],
+      "js": [
+        "scripts/index.js"
+      ],
       "matches": [
         "http://*/*",
         "https://*/*"
-      ]
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true
     }
   ],
   "background": {
