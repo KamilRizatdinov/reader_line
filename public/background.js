@@ -16,6 +16,9 @@ chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => 
   if (message.type && message.type === 'openPopup') {
     chrome.action.openPopup()
     sendResponse({status: "OK"})
+  } else if (message.type && message.type === 'toggleEnabled') {
+    chrome.storage.local.get(["enabled"]).then(({ enabled }) => { chrome.storage.local.set({ ['enabled']: enabled ? 0 : 1 }) })
+    sendResponse({ status: "OK" })
   }
 })
 
